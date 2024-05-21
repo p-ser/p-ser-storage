@@ -17,8 +17,8 @@ spec:
           configMap:
             name: app-config
         - name: storage
-          hostPath:
-            path: config/storage
+          persistentVolumeClaim:
+            claimName: storage-pvc
       containers:
         - name: storage-container
           image: amanecopse/p-ser-storage

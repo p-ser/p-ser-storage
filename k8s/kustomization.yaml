@@ -5,6 +5,7 @@ resources:
   - ./deployment.yaml
   - ./service.yaml
   - ./namespace.yaml
+  - ./volume.yaml
 commonLabels:
   app: p-ser-storage
 configMapGenerator:
