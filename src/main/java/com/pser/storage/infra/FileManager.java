@@ -1,7 +1,7 @@
-package com.example.storage.infra;
+package com.pser.storage.infra;
 
-import com.example.storage.error.FileUploadException;
-import com.example.storage.error.NotFoundException;
+import com.pser.storage.error.FileUploadException;
+import com.pser.storage.error.NotFoundException;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package com.example.storage.infra;
+package com.pser.storage.infra;
 
 import lombok.Getter;
 

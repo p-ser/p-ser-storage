@@ -1,6 +1,6 @@
-package com.example.storage.error;
+package com.pser.storage.error;
 
-import com.example.storage.dto.ApiResponse;
+import com.pser.storage.dto.ApiResponse;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import java.util.stream.Collectors;
 import org.springframework.http.HttpHeaders;

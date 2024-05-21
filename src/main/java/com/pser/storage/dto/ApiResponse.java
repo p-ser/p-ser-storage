@@ -1,4 +1,4 @@
-package com.example.storage.dto;
+package com.pser.storage.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

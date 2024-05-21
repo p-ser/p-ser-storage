@@ -1,4 +1,4 @@
-package com.example.storage.error;
+package com.pser.storage.error;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException() {

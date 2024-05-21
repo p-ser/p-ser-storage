@@ -1,4 +1,4 @@
-package com.example.storage.dto;
+package com.pser.storage.dto;
 
 import java.util.List;
 import lombok.Data;

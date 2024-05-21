@@ -1,4 +1,4 @@
-package com.example.storage.config;
+package com.pser.storage.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;

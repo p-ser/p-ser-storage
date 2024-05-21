@@ -1,9 +1,9 @@
-package com.example.storage.application;
+package com.pser.storage.application;
 
-import com.example.storage.dto.FileUploadResponse;
-import com.example.storage.error.FileExtensionException;
-import com.example.storage.infra.FileManager;
-import com.example.storage.infra.FileTypeEnum;
+import com.pser.storage.dto.FileUploadResponse;
+import com.pser.storage.error.FileExtensionException;
+import com.pser.storage.infra.FileManager;
+import com.pser.storage.infra.FileTypeEnum;
 import java.util.Arrays;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -15,28 +15,24 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class ImageService {
+public class PdfService {
     private final FileManager fileManager;
     private final List<String> allowedExtensions = List.of(
-            "jpg",
-            "png",
-            "jpeg",
-            "gif",
-            "svg"
+            "pdf"
     );
 
     public byte[] getByName(String fileName) {
-        return fileManager.getByName(fileName, FileTypeEnum.IMAGE);
+        return fileManager.getByName(fileName, FileTypeEnum.PDF);
     }
 
     public FileUploadResponse save(MultipartFile[] files) {
         checkFileType(files);
-        List<String> fileNames = fileManager.upload(files, FileTypeEnum.IMAGE);
+        List<String> fileNames = fileManager.upload(files, FileTypeEnum.PDF);
         return new FileUploadResponse(fileNames);
     }
 
     public void delete(String fileName) {
-        fileManager.delete(fileName, FileTypeEnum.IMAGE);
+        fileManager.delete(fileName, FileTypeEnum.PDF);
     }
 
     private void checkFileType(MultipartFile[] files) {
