@@ -16,6 +16,9 @@ spec:
         - name: app-config
           configMap:
             name: app-config
+        - name: storage
+          hostPath:
+            path: config/storage
       containers:
         - name: storage-container
           image: amanecopse/p-ser-storage
@@ -24,3 +27,5 @@ spec:
           volumeMounts:
             - mountPath: "/share"
               name: app-config
+            - mountPath: "/storage"
+              name: storage
