@@ -11,8 +11,8 @@ spec:
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: slow
-#  추후에 nfs로 변경할 것
+  storageClassName: "storage"
+  #  추후에 nfs로 변경할 것
   hostPath:
     path: /run/desktop/mnt/host/c/workspace/p-ser-storage/k8s/config/storage
     type: DirectoryOrCreate
@@ -31,5 +31,5 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 2Gi
+      storage: 5Gi
   storageClassName: "storage"
